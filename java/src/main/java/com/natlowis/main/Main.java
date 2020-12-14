@@ -6,8 +6,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Sorting sort = new BubbleSort();
-		int[] arrayToSort = {4,765,32,87,12,98};
+		Sorting sort = new QuickSortNonStable();
+		int[] arrayToSort = {4,765};
 		int[] answer = sort.sort(arrayToSort);
 		
 		for (int num: answer) {

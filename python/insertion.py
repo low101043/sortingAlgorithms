@@ -4,7 +4,7 @@ def insertion(dataArray):
         currentData = dataArray[index]
         position = index
         
-        while position > 0 and dataArray[position - 1] > currentData:
+        while position > 0 and dataArray[position - 1] < currentData:
             
             dataArray[position] = dataArray[position - 1]
             position = position - 1
