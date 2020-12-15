@@ -14,3 +14,5 @@ The algorithms which will be/are implemented:
 - Quick Sort
 
 These algorithms have been chosen as these are always taught and I have/can code these algorithms in the languages above. 
+
+Each langauge each has its own small UI so you can 'use' them.
