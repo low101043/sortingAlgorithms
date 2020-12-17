@@ -14,5 +14,3 @@ def bubble(alist):
         #print("End of pass", outerLoop + 1)
         
     return alist
-
-print(bubble([4,724,87223,68,23,8]))

@@ -21,4 +21,3 @@ def quick_sort(dataArray):
         #print("first part",first_part, "second part", second_part,"dataArray", dataArray)
         return first_part + second_part
     
-print(quick_sort([1,35,57,23487,45,23668,23]))

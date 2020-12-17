@@ -12,5 +12,3 @@ def insertion(dataArray):
         dataArray[position] = currentData
         
     return dataArray
-
-print(insertion([46,232,76,13,9,234]))

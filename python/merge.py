@@ -38,5 +38,3 @@ def merge_sort(mergeList):
             mainListPos = mainListPos + 1
             
     return mergeList
-
-print(merge_sort([13,64,5424,64]))
