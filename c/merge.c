@@ -1,41 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Tuple
-{
-     
-    int *listToUse;
-    int sizeOfList;
-
-} Tuple;
-
-int input(Tuple *toSendBack)
-{
-
-    int N, i;
-    int *p;
-
-    printf("Please enter how many different values you want: ");
-    scanf("%d", &N);
-
-    if ((p = (int *) malloc(N*sizeof(int))) == NULL)
-    {
-        printf("Allocation failed");
-        return -1;
-    }
-    printf("\nProvide %d integers please \n", N);
-    for (i=0; i<N; i++)
-    {
-        scanf("%d", p+i);
-    }
-
-    
-    toSendBack->listToUse = p;
-    toSendBack->sizeOfList = N;
-
-    return 0;
-
-}
+//#include "utils.h"
+//#include "utils.c"
 
 int merge(Tuple *data, int left, int mid, int right)
 {
@@ -95,46 +62,17 @@ int mergeSort(Tuple *data, int left, int right)
 {
     if (left < right)
     {
-        printf("In mergesort \n");
+        //printf("In mergesort \n");
         int mid;
         mid = (left + right) / 2;
         mergeSort(data, left, mid);
         mergeSort(data, mid+1, right);
         merge(data,left,mid,right);
-        printf("Data -> :\n");
+        //printf("Data -> :\n");
     }
 }
 
 int mergeAlgorithm(Tuple *data)
 {
     mergeSort(data, 0, (data->sizeOfList)-1);
-}
-
-
-int main()
-{
-    int *p, N, i;
-    
-    Tuple dataForList;
-    Tuple *data = &dataForList;
-
-    int finished = input(data);
-    if (finished == -1)
-    {
-        exit(-1);
-    }
-
-
-    int end = mergeAlgorithm(data);
-
-    p = data->listToUse;
-    N = data->sizeOfList;
-
-    printf("\nThe List in order: ");
-    for (i=0; i < N - 1; i++)
-    {
-        printf("%d, ", *(p+i));
-    }
-    printf("%d\n", *(p+i));
-    free(p);
 }
