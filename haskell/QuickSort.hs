@@ -1,3 +1,5 @@
+module QuickSort where
+
 qsort :: Ord a => [a] -> [a]
 
 qsort [] = []

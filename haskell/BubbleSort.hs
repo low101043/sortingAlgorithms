@@ -1,3 +1,5 @@
+module BubbleSort where
+
 -- Should Perform Bubble Sort
 
 swap :: Ord a => [a] -> [a]
