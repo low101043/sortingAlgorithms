@@ -1,9 +1,7 @@
 module QuickSort where
 
-qsort :: Ord a => [a] -> [a]
-
+qsort :: Ord a => [a] -> [a]  --Performs quick sort
 qsort [] = []
-
 qsort xs = (qsort lower) ++ [x] ++ (qsort upper)
             where
                 x = xs !! 0

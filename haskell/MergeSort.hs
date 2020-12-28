@@ -14,7 +14,7 @@ eosplit [x]      = ([x],[])
 eosplit (e:o:xs) = case eosplit xs of
                      (es,os) -> (e:es, o:os)
 
-msort :: Ord a => [a] -> [a]
+msort :: Ord a => [a] -> [a]  --Performs merge sort
 msort xs | length xs <= 1  =  xs
          | otherwise       = merge (msort es) (msort os)
                              where (es, os) = eosplit xs
