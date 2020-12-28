@@ -4,3 +4,9 @@ This was the first Programming Language I learnt (used in GCSE and A Level Compu
 
 ## Credit
 - Dr Hughes - A Level teacher who taught me these algorithms.  
+
+## Running
+
+- Linux
+    - Have Python 3 installed
+    ``` python main.py ```

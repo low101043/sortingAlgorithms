@@ -5,3 +5,7 @@ This is the second programming language I was taught.  I learnt this language in
 ## Credit
 
 - Alan Sexton - Algorithms are from him
+
+## Running
+
+- Use Javac or IDEs

@@ -1,4 +1,6 @@
-This is the sorting algorithms for Haskell
+# Haskell
+
+This is the sorting algorithms for Haskell.  This was the fourth language I was taught.
 
 
 ## Credit
@@ -9,4 +11,10 @@ This is the sorting algorithms for Haskell
 - Graham Hutton (Insertion Sort)
   - Book: Programming In Haskell Published 2016
 - Me - Bubble Sort
+
+# To Run
+
+- Linux - Have the latest version of Haskell Downloaded
+``` ghc --make Main.hs ```
+``` ./Main ```
 

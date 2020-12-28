@@ -22,12 +22,12 @@ while looper:
     elif menu_choice == "3":
         data_chosen = inputOutput.input_to_choose()
         print("Performing Merge Sort")
-        output = merge.merge(data_chosen)
+        output = merge.merge_sort(data_chosen)
         inputOutput.output_list(output)
     elif menu_choice == "4":
         data_chosen = inputOutput.input_to_choose()
         print("Performing Quick Sort")
-        output = quick.quick(data_chosen)
+        output = quick.quick_sort(data_chosen)
         inputOutput.output_list(output)
     else:
         looper = False
