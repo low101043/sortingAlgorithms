@@ -1,40 +1,50 @@
-def merge_sort(mergeList):
+def merge_sort(merge_list):
+
+    """Sort the list using merge sort numerically in ascending order
+    merge_list - the list to be sorted
+    returns the sorted list
+    """
     
-    if len(mergeList) > 1:
-        mid = len(mergeList) // 2
-        leftHalf = mergeList[:mid]
-        rightHalf = mergeList[mid:]
+    #If the list is larger than one
+    if len(merge_list) > 1: 
+
+        #Splits the list in two
+        mid = len(merge_list) // 2  
+        left_half = merge_list[:mid]
+        right_half = merge_list[mid:]
         
-        merge_sort(leftHalf)
-        merge_sort(rightHalf)
+        #Sorts the lists
+        merge_sort(left_half)
+        merge_sort(right_half)
         
-        leftHalfPos = 0
-        rightHalfPos = 0
-        mainListPos = 0
+        left_half_pos = 0
+        right_half_pos = 0
+        main_list_pos = 0
         
-        while leftHalfPos < len(leftHalf) and rightHalfPos < len(rightHalf):
+        #Adds the two lists together
+        while left_half_pos < len(left_half) and right_half_pos < len(right_half):
             
-            if leftHalf[leftHalfPos] < rightHalf[rightHalfPos]:
+            if left_half[left_half_pos] < right_half[right_half_pos]:
                 
-                mergeList[mainListPos] = leftHalf[leftHalfPos]
-                leftHalfPos = leftHalfPos + 1
+                merge_list[main_list_pos] = left_half[left_half_pos]
+                left_half_pos = left_half_pos + 1
                 
             else:
-                mergeList[mainListPos] = rightHalf[rightHalfPos]
-                rightHalfPos = rightHalfPos + 1
+                merge_list[main_list_pos] = right_half[right_half_pos]
+                right_half_pos = right_half_pos + 1
         
-            mainListPos = mainListPos + 1
+            main_list_pos = main_list_pos + 1
     
-        while leftHalfPos < len(leftHalf):
+        while left_half_pos < len(left_half):
             
-            mergeList[mainListPos] = leftHalf[leftHalfPos]
-            leftHalfPos = leftHalfPos + 1
-            mainListPos = mainListPos + 1
+            merge_list[main_list_pos] = left_half[left_half_pos]
+            left_half_pos = left_half_pos + 1
+            main_list_pos = main_list_pos + 1
             
-        while rightHalfPos < len(rightHalf):
+        while right_half_pos < len(right_half):
             
-            mergeList[mainListPos] = rightHalf[rightHalfPos]
-            rightHalfPos = rightHalfPos + 1
-            mainListPos = mainListPos + 1
+            merge_list[main_list_pos] = right_half[right_half_pos]
+            right_half_pos = right_half_pos + 1
+            main_list_pos = main_list_pos + 1
             
-    return mergeList
+    return merge_list

@@ -1,16 +1,20 @@
-def bubble(alist):
+def bubble(a_list):
+
+    """Will Sort the list numerically ascending
+    a_list - The list to be sorted
+    returns a sorted list"""
     
-    passnum = len(alist) -1
-    for outerLoop in range(passnum):    #Checks where you are in the list
+    passnum = len(a_list) -1
+    for outer_loop in range(passnum):    #Checks where you are in the list
         
-        for innerLoop in range(passnum):    #does each comparison
+        for inner_loop in range(passnum):    #does each comparison
             
-            if alist[innerLoop] > alist[innerLoop+1]:   #comparing
-                temp = alist[innerLoop]         #swap
-                alist[innerLoop]= alist[innerLoop+1]    #swap
-                alist[innerLoop + 1] = temp     #swap
+            if a_list[inner_loop] > a_list[inner_loop+1]:   #comparing
+                temp = a_list[inner_loop]         #swap
+                alist[inner_loop]= a_list[inner_loop+1]    #swap
+                alist[inner_loop + 1] = temp     #swap
             #print(alist)
             
         #print("End of pass", outerLoop + 1)
         
-    return alist
+    return a_list
