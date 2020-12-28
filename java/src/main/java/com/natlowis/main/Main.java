@@ -45,12 +45,7 @@ public class Main {
 			}
 			
 			inputChosen = io.menu();
-			try {
-				Thread.sleep(10000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 		}
 		System.out.println("Goodbye");
 		io.close();
