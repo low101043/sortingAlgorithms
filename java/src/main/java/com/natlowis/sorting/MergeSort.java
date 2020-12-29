@@ -1,8 +1,13 @@
 package com.natlowis.sorting;
 
-public class MergeSort implements Sorting {
+/**
+ * This performs merge sort in ascending order
+ * @author low101043
+ *
+ */
+class MergeSort implements Sorting {
 
-	int[] a;
+	int[] a; //To be sorted
 	
 	@Override
 	public int[] sort(int[] a) {
@@ -12,15 +17,26 @@ public class MergeSort implements Sorting {
 		
 	}
 
+	/**
+	 * The recursive function
+	 * @param left  The left side to be sorted
+	 * @param right The right side to be sorted
+	 */
 	private void mergesort(int left, int right) {
 		if (left < right) {
-			int mid = (left + right) /2;
+			int mid = (left + right) / 2;
 			mergesort(left, mid);
 			mergesort(mid+1,right);
 			merge(left,mid,right);
 		}
 	}
 
+	/**
+	 * Performs the actual merge
+	 * @param left The left side of the array
+	 * @param mid The middle element
+	 * @param right The right side of the array
+	 */
 	private void merge(int left, int mid, int right) {
 		
 		int[] b = new int[right-left + 1];

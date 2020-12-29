@@ -1,5 +1,10 @@
 package com.natlowis.sorting;
 
+/**
+ * Performs Bubble sort.
+ * @author low101043
+ *
+ */
 public class BubbleSort implements Sorting {
 
 	@Override

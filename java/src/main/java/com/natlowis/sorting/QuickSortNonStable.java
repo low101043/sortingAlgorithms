@@ -2,6 +2,11 @@ package com.natlowis.sorting;
 
 import java.util.Random;
 
+/**
+ * Performs quck sort but not in a stable way.
+ * @author low101043
+ *
+ */
 public class QuickSortNonStable implements Sorting {
 
 	int[] a;
@@ -13,6 +18,11 @@ public class QuickSortNonStable implements Sorting {
 		return this.a;
 	}
 
+	/**
+	 * The recursive method
+	 * @param left The left side to use
+	 * @param right The right side to use
+	 */
 	private void quicksort( int left, int right) {
 		if (left < right) {
 			int pivotIndex = partition(left, right);
@@ -21,6 +31,12 @@ public class QuickSortNonStable implements Sorting {
 		}
 	}
 
+	/**
+	 * The splitting and sorting of the list
+	 * @param left the left side
+	 * @param right the right side
+	 * @return the list sorted between left and right
+	 */
 	private int partition(int left, int right) {
 		
 		int pivotIndex = choosePivot(left, right);
@@ -57,6 +73,12 @@ public class QuickSortNonStable implements Sorting {
 		return leftmark;
 	}
 
+	/**
+	 * Choose the pivot
+	 * @param left the smallest it could be
+	 * @param right the largest it could be 
+	 * @return the pivot
+	 */
 	private int choosePivot(int left, int right) {
 
 		return left;

@@ -6,9 +6,11 @@ import com.natlowis.sorting.*;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		InputOutput io = new InputOutput();
-		int inputChosen = io.menu();
+		
+		
+		InputOutput io = new InputOutput();  
+		int inputChosen = io.menu(); //Get input
+		
 		while (inputChosen != 5) {
 			
 			if (inputChosen == 1) {

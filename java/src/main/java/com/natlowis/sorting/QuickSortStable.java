@@ -1,8 +1,13 @@
 package com.natlowis.sorting;
 
+/**
+ * Performs Quick sort and keeps in same list
+ * @author low101043
+ *
+ */
 public class QuickSortStable implements Sorting {
 
-int[] a;
+	int[] a;  //The list to sort
 	
 	@Override
 	public int[] sort(int[] a) {
@@ -11,6 +16,11 @@ int[] a;
 		return this.a;
 	}
 
+	/**
+	 * The recursive method
+	 * @param left The left side to use
+	 * @param right The right side to use
+	 */
 	private void quicksort( int left, int right) {
 		if (left < right) {
 			int pivotIndex = partition(left, right);
@@ -19,6 +29,12 @@ int[] a;
 		}
 	}
 
+	/**
+	 * The splitting and sorting of the list
+	 * @param left the left side
+	 * @param right the right side
+	 * @return the list sorted between left and right
+	 */
 	private int partition(int left, int right) {
 		
 		int[] b = new int[right -left + 1];
@@ -48,9 +64,15 @@ int[] a;
 		return right - bcount +1;
 	}
 
+	/**
+	 * Choose the pivot
+	 * @param left the smallest it could be
+	 * @param right the largest it could be 
+	 * @return the pivot
+	 */
 	private int choosePivot(int left, int right) {
 
 		return left;
-		//return (right - left -1 ) /2;
+		
 	}
 }
