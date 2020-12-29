@@ -7,7 +7,7 @@ The Programming Languages shown are:
 - C
 - Haskell
 
-The algorithms which will be/are implemented:
+The algorithms which are implemented:
 - Bubble Sort
 - Insertion Sort
 - Merge Sort
@@ -16,3 +16,5 @@ The algorithms which will be/are implemented:
 These algorithms have been chosen as these are always taught and I have/can code these algorithms in the languages above. 
 
 Each langauge each has its own small UI so you can 'use' them.
+
+They have not been fully tested.  
