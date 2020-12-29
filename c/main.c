@@ -12,22 +12,6 @@
 
 int main()
 {
-    /*int *p, N, i;
-    
-    Tuple dataForList;
-    Tuple *data = &dataForList;
-
-    int finished = input(data);
-    if (finished == -1)
-    {
-        exit(-1);
-    }
-
-
-    int end = bubble(data);
-
-    output(data);*/
-
     int choice;
     Tuple dataForList;
     Tuple *data;

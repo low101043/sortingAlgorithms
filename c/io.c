@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#include "utils.h"
-//#include "utils.c"
-
+/**
+ * This will get the input list 
+ * @param toSendBack the empty list
+ * @return an int to say if it's successful
+ */
 int input(Tuple *toSendBack)
 {
 
@@ -13,7 +15,7 @@ int input(Tuple *toSendBack)
     printf("Please enter how many different values you want: ");
     scanf("%d", &N);
 
-    if ((p = (int *) malloc(N*sizeof(int))) == NULL)
+    if ((p = (int *) malloc(N*sizeof(int))) == NULL)  // This dynamically allocates the memory
     {
         printf("Allocation failed");
         return -1;
@@ -32,7 +34,11 @@ int input(Tuple *toSendBack)
 
 }
 
-int output(Tuple *data)
+/**
+ * This outputs the list
+ * @param data the list to be outputted
+ */
+void output(Tuple *data)
 {
     int* p;
     int N, i;
@@ -45,9 +51,13 @@ int output(Tuple *data)
         printf("%d, ", *(p+i));
     }
     printf("%d\n", *(p+i));
-    free(p);
+    free(p);  //Frees the list
 }
 
+/**
+ * This is the menu to be outputted
+ * @return the input number
+ */
 int menu()
 {
     int input;

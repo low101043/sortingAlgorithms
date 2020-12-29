@@ -10,4 +10,6 @@ This will be the code for the sorting algorithms for C.  This was my third langu
 
 - Linux
 ``` gcc main.c ```
-``` ./main ```
+``` ./a.out ```
+
+Note this does not protect againt inputting letters instead of digits.

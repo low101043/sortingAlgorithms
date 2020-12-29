@@ -1,21 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#include "utils.h"
-//#include "utils.c"
-
+/**
+ * Merges the two lists together
+ * @param data the list to be sorted
+ * @param left the furthest left to be sorted
+ * @param mid the middle element
+ * @param right the furthest right to be sorted
+ */
 int merge(Tuple *data, int left, int mid, int right)
 {
     int* ptr;
     int bcount, lcount, rcount;
-    if ((ptr = (int *) malloc((right-left+1)*sizeof(int))) == NULL)
+    if ((ptr = (int *) malloc((right-left+1)*sizeof(int))) == NULL)  //This will allocate the list which will contain the list being sorted
     {
         printf("Error\n");
         return -1;
     }
+
     bcount = 0;
     lcount = left;
     rcount = mid +1;
+
     while ((lcount <= mid) && (rcount <= right))
     {
         if (*((data->listToUse)+lcount) < *((data->listToUse)+rcount))
@@ -58,7 +64,13 @@ int merge(Tuple *data, int left, int mid, int right)
     return 0;
 }
 
-int mergeSort(Tuple *data, int left, int right)
+/**
+ * The recursive function
+ * @param data the list to be sorted
+ * @param left the furthest left to be sorted
+ * @param right the furthest right to be sorted
+ */
+void mergeSort(Tuple *data, int left, int right)
 {
     if (left < right)
     {
@@ -72,6 +84,10 @@ int mergeSort(Tuple *data, int left, int right)
     }
 }
 
+/**
+ * Performs merge sort in ascending order
+ * @param data the list to be sorted
+ */
 int mergeAlgorithm(Tuple *data)
 {
     mergeSort(data, 0, (data->sizeOfList)-1);
